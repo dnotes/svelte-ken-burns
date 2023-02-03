@@ -1,20 +1,23 @@
 {
 	"name": "svelte-ken-burns",
 	"version": "0.0.1",
-	"private": true,
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
 		"preview": "vite preview",
+		"package": "svelte-package && rm package/*cms*.*",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
+	},
+	"dependencies": {
+		"svelte": "^3.54.0"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "^1.0.0",
 		"@sveltejs/kit": "^1.0.0",
-		"svelte": "^3.54.0",
+		"@sveltejs/package": "^1.0.2",
 		"svelte-check": "^3.0.1",
-		"sveltecms": "^0.0.35",
+		"sveltecms": "^0.0.36",
 		"tslib": "^2.4.1",
 		"typescript": "^4.9.3",
 		"vite": "^4.0.0"

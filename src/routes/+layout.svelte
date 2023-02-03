@@ -7,10 +7,9 @@
 <div id="page">
 
   <header>
-    <div class="sitename">Your Site Name</div>
+    <div class="sitename"><a href="/">Svelte Ken Burns</a></div>
     <nav>
-      <a href="/">Home</a>
-      <a href="/blog">Blog</a>
+      <a href="https://github.com/dnotes/svelte-ken-burns">GitHub</a>
       {#if import.meta.env.MODE === 'development'}
         <a href="/admin">Admin</a>
       {/if}
@@ -30,6 +29,10 @@
     align-items: center;
     padding: 4px 20px;
     background: rgba(0,0,0,.4);
+  }
+  header a {
+    color:white;
+    text-decoration: none;
   }
   div.sitename {
     font-size: 200%;
