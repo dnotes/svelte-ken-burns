@@ -113,18 +113,9 @@
     </label>
   </div>
 
-
-  <style>
-    div.slot { height:100%; width:100%; max-width:480px; margin:auto; display:flex; flex-direction:column; align-items:center; justify-content:center; }
-  </style>
 </div>
 
 <style>
-  div.content {
-    max-width: 640px;
-    width: 100%;
-    margin: 0 auto;
-  }
   label {
     display: flex;
     gap: .8em;
