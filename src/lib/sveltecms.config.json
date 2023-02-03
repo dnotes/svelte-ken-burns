@@ -1,8 +1,5 @@
 {
   "configPath": "src/lib/sveltecms.config.json",
-  "settings": {
-    "buildAdmin": true
-  },
   "contentTypes": {
     "slideshow": {
       "slug": "title",

@@ -119,8 +119,9 @@
   {@html data.html}
 
   <div class="tryit">
-    <a href="/admin/content/slideshow/_">Try it here!</a>
-    <p><sup>*</sup> you won't actually be able to save unless you are running code locally or in a WebContainer, e.g. on StackBlitz.</p>
+    <p>If you're feeling adventurous, you can...</p>
+    <a class="button" href="https://sveltecms.pages.dev/docs/getting-started">Try out SvelteCMS!</a>
+    <p>...and don't forget to install Svelte Ken Burns! <code>npm i -D svelte-ken-burns</code></p>
   </div>
 
 </div>
@@ -141,8 +142,9 @@
     justify-content: center;
     align-items: center;
   }
-  div.tryit a {
+  a.button {
     display: block;
+    text-align: center;
     font-size: 150%;
     font-weight: bold;
     font-variant: small-caps;
@@ -151,8 +153,6 @@
     border: 2px solid cornflowerblue;
   }
   div.tryit p {
-    opacity: .6;
-    font-size: 80%;
     text-align: center;
   }
 
