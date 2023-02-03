@@ -3,6 +3,7 @@
   --text-color: #222;
   background: var(--bg-color);
   color: var(--text-color);
+  font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
 }
 @media(prefers-color-scheme:dark) {
   :root {
@@ -10,4 +11,6 @@
     --text-color: white;
   }
 }
-
+body {
+  margin:0;
+}

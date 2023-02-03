@@ -14,9 +14,9 @@
         y: 50,
       },
       end: {
-        zoom: 3.1,
+        zoom: 2.4,
         x: 46,
-        y: 54,
+        y: 50,
       }
     },
     {
@@ -29,8 +29,8 @@
         y: 100,
       },
       end: {
-        zoom:1.5,
-        y: 30,
+        zoom:1.4,
+        y: 70,
       }
     },
     {
@@ -39,7 +39,7 @@
         alt: 'a rocky beach with crashing waves',
       },
       start: {
-        y: 55,
+        y: 35,
       },
       end: {
         y: 25,
@@ -51,12 +51,12 @@
         alt: 'a mountain town shining in the sunlight',
       },
       start: {
-        zoom: 1.3,
+        zoom: 1.2,
         y: 25,
       },
       end: {
         zoom: 1,
-        y: 50,
+        y: 38,
       },
     }
   ]
@@ -84,6 +84,7 @@
     <label>
       <span>Slide Duration:</span>
       <input type="range" bind:value={options.slideDuration} min=1 max=12 step=.1>
+      <span>{options.slideDuration}</span>
     </label>
   </div>
 
@@ -91,20 +92,16 @@
     <label>
       <span>Fade Duration:</span>
       <input type="range" bind:value={options.fadeDuration} min=.1 max=4 step=.1>
+      <span>{options.fadeDuration}</span>
     </label>
   </div>
 
   <div>
     <label>
-      <span>Fade Out Duration:</span>
-      <input type="range" bind:value={options.fadeOutDuration} min=.1 max=8 step=.1>
-    </label>
-  </div>
-
-  <div>
-    <label>
-      <span>Iterations (0 = infinite):</span>
+      <span>Iterations:</span>
       <input type="range" bind:value={options.iterations} min=0 max=12>
+      <span>{options.iterations}</span>
+      <span><em>(0 = infinite)</em></span>
     </label>
   </div>
 
@@ -112,12 +109,12 @@
     <label>
       <span>End opacity:</span>
       <input type="range" bind:value={options.endOpacity} min=0 max=1 step=.1>
+      <span>{options.endOpacity}</span>
     </label>
   </div>
 
 
   <style>
-    div { padding: .2em; }
     div.slot { height:100%; width:100%; max-width:480px; margin:auto; display:flex; flex-direction:column; align-items:center; justify-content:center; }
   </style>
 </div>
@@ -131,5 +128,8 @@
   label {
     display: flex;
     gap: .8em;
+  }
+  label > span:first-child {
+    width: 120px;
   }
 </style>
