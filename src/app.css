@@ -4,6 +4,8 @@
   background: var(--bg-color);
   color: var(--text-color);
   font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+  font-size:18px;
+  line-height: 1.3em;
 }
 @media(prefers-color-scheme:dark) {
   :root {
@@ -19,4 +21,22 @@ div.content {
   width: 100%;
   margin: 0 auto;
   padding: 1.5em;
+}
+pre {
+  max-width: 100%;
+  overflow-x: scroll;
+  background-color: rgba(127,127,127,.3);
+  padding: 1em;
+}
+pre,code {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 15px;
+  line-height: 1.5em;
+}
+p,li {
+  margin: .4em 0;
+}
+a {
+  color: cornflowerblue;
+  text-decoration: none;
 }

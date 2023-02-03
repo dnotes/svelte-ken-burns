@@ -1,6 +1,9 @@
 <script lang="ts">
   import type { Slide, SlideshowOptions } from "$lib/index";
   import Slideshow from "$lib/Slideshow.svelte";
+  import type { PageData } from "./$types";
+
+  export let data:PageData
 
   let slides:Slide[] = [
     {
@@ -113,6 +116,13 @@
     </label>
   </div>
 
+  {@html data.html}
+
+  <div class="tryit">
+    <a href="/admin/content/page/_">Try it here!</a>
+    <p><sup>*</sup> you won't actually be able to save unless you are running code locally or in a WebContainer, e.g. on StackBlitz.</p>
+  </div>
+
 </div>
 
 <style>
@@ -123,4 +133,27 @@
   label > span:first-child {
     width: 120px;
   }
+  div.tryit {
+    width: 360px;
+    margin: 2em auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  div.tryit a {
+    display: block;
+    font-size: 150%;
+    font-weight: bold;
+    font-variant: small-caps;
+    padding: .5em 2em;
+    border-radius: 40px;
+    border: 2px solid cornflowerblue;
+  }
+  div.tryit p {
+    opacity: .6;
+    font-size: 80%;
+    text-align: center;
+  }
+
 </style>
