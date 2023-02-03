@@ -67,7 +67,7 @@ export const kenBurnsPlugin:CMSPlugin = {
   ],
   conf: {
     fieldgroups: {
-      kenburns: {
+      skb_slideshow: {
         id: "skb_slideshow",
         tags: [
           "fullwidth",

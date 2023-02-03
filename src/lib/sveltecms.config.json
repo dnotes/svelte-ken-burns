@@ -1,3 +1,28 @@
 {
-  "configPath": "src/lib/sveltecms.config.json"
+  "configPath": "src/lib/sveltecms.config.json",
+  "settings": {
+    "buildAdmin": true
+  },
+  "contentTypes": {
+    "slideshow": {
+      "slug": "title",
+      "fields": {
+        "title": "title",
+        "slideshow": {
+          "type": "fieldgroup",
+          "fieldgroup": "skb_kenburns",
+          "widget": {
+            "type": "fieldgroup",
+            "useComponents": true,
+            "fieldgroups": [
+              "skb_slideshow"
+            ]
+          }
+        }
+      },
+      "contentStore": "staticFiles",
+      "mediaStore": "staticFiles",
+      "label": ""
+    }
+  }
 }

@@ -119,7 +119,7 @@
   {@html data.html}
 
   <div class="tryit">
-    <a href="/admin/content/page/_">Try it here!</a>
+    <a href="/admin/content/slideshow/_">Try it here!</a>
     <p><sup>*</sup> you won't actually be able to save unless you are running code locally or in a WebContainer, e.g. on StackBlitz.</p>
   </div>
 
