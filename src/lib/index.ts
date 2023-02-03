@@ -46,14 +46,22 @@ export const kenBurnsPlugin:CMSPlugin = {
       component: Slideshow,
     }
   ],
+  fieldTypes: [
+    {
+      id: 'panZoom',
+      default: { x:50, y:50, zoom:1 },
+      widget: 'panZoom',
+    }
+  ],
   widgetTypes: [
     {
       id: 'panZoom',
       description: "A widget for entering pan and zoom coordinates on an image.",
       widget: PanZoomWidget,
-      fieldTypes: ["panZoom"],
+      fieldTypes: ["fieldgroup"],
+      handlesFields: true,
       formDataHandler: async (value) => {
-        return { x:parseFloat(value['x'][0]), y:parseFloat(value['y'][0]), zoom:parseFloat(value['zoom'][0]) }
+        return { x: parseFloat(value['x'][0]), y: parseFloat(value['y'][0]), zoom: parseFloat(value['zoom'][0])}
       }
     }
   ],
@@ -133,15 +141,6 @@ export const kenBurnsPlugin:CMSPlugin = {
       }
     },
     fields: {
-      panZoom: {
-        type: 'fieldgroup',
-        widget: 'panZoom',
-        fields: {
-          x: "float",
-          y: "float",
-          zoom: "float",
-        }
-      },
       slides: {
         type: "fieldgroup",
         multiple: true,
