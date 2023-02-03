@@ -1,6 +1,7 @@
 {
 	"name": "svelte-ken-burns",
-	"version": "0.0.1",
+	"homepage": "https://svelte-ken-burns.pages.dev",
+	"version": "0.0.2",
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
