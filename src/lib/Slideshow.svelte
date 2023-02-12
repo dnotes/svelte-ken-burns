@@ -122,8 +122,8 @@
 
 <div class="skb-slideshow override">
 
-  <label for="skb-pause">play / pause</label>
   <input type="checkbox" id="skb-pause" name="skb-pause" class="skb-pause" bind:checked={paused}>
+  <label for="skb-pause" style="position:absolute; z-index:500;" />
 
   {#each (items || []) as slide, i}
 
@@ -187,6 +187,22 @@
   .skb-slideshow>label { position:absolute; z-index:100; width:100%; height:100%; top:0; left:0; padding:.5em; }
   input.skb-pause { display:none; }
   input.skb-pause:checked ~ div.skb-slide > img { --skb-paused:paused; }
+
+  label:before {
+    position:absolute;
+    top:10px;
+    left:10px;
+    content:"";
+    background-image:url("./pause.png");
+    width:24px;
+    height:24px;
+    background-size:contain;
+    background-repeat:no-repeat;
+    opacity:.2;
+  }
+  input:checked + label:before {
+    background-image:url("./play.png");
+  }
 
   @media(prefers-reduced-motion) {
     img {
