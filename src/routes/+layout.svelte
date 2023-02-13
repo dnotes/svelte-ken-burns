@@ -6,7 +6,7 @@
 
 <div id="page">
 
-  <header>
+  <header data-sveltekit-preload-code>
     <div class="sitename"><a href="/">Svelte Ken Burns</a></div>
     <nav>
       <a href="https://github.com/dnotes/svelte-ken-burns">GitHub</a>
@@ -30,10 +30,6 @@
     padding: 4px 20px;
     background: rgba(0,0,0,.4);
   }
-  header a {
-    color:white;
-    text-decoration: none;
-  }
   div.sitename {
     font-size: 200%;
     flex-grow: 1;
@@ -45,6 +41,10 @@
   nav a {
     display: block;
     padding: 2px 8px;
+  }
+  header a {
+    color: var(--text-color);
+    text-decoration: none;
   }
 
 </style>
