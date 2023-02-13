@@ -58,8 +58,7 @@ export const kenBurnsPlugin:CMSPlugin = {
       id: 'panZoom',
       description: "A widget for entering pan and zoom coordinates on an image.",
       widget: PanZoomWidget,
-      fieldTypes: ["fieldgroup"],
-      handlesFields: true,
+      fieldTypes: ['panZoom'],
       formDataHandler: async (value) => {
         return { x: parseFloat(value['x'][0]), y: parseFloat(value['y'][0]), zoom: parseFloat(value['zoom'][0])}
       }
