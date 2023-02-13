@@ -1,12 +1,12 @@
 {
 	"name": "svelte-ken-burns",
 	"homepage": "https://svelte-ken-burns.pages.dev",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
 		"preview": "vite preview",
-		"package": "svelte-package && rm package/*cms*.* && sed -i '.bak' '/cms\\./d;s/index\\.js\",/index.js\"/' package/package.json && rm package/package.json.bak",
+		"package": "svelte-package && rm package/*cms*.* && sed -i '.bak' '/cms\\./d;s/play\\.svg\",/play.svg\"/' package/package.json && rm package/package.json.bak",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
 	},
